@@ -46,6 +46,9 @@ Just head over to the [**Issues**](../../issues) tab and click **New Issue** to 
 ---
 
 ## Developing Your Own Apps
+
+[![NuGet Badge](https://buildstats.info/nuget/Pxl)](https://www.nuget.org/packages/Pxl)
+
 You can use this repository as a reference point for developing your own custom PXL-Clock applications. We will be providing (or already have provided) examples, documentation, and tools to help you get started. Look for folders named `examples` or `docs` to find:
 - Sample code to illustrate how to interface with the clock’s hardware
 - Tutorials and step-by-step guides  
