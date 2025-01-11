@@ -21,7 +21,7 @@ We’re excited to see what the community will build around the PXL-Clock. Below
 4. [Developing Your Own Apps](#developing-your-own-apps)  
 5. [Contributing](#contributing)  
 6. [Connect](#connect)
-7. [License](#license)
+7. [License](LICENSE.md)
 
 ---
 
