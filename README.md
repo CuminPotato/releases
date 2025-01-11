@@ -23,12 +23,10 @@ We’re excited to see what the community will build around the PXL-Clock. Below
 ## About PXL-Clock
 The **PXL-Clock** is an a project designed to display various fun clocks, animations, short stories, visuals and other creative things - all on a 24x24 pixel display. Whether you want to keep track of the current time in a futuristic manner or develop your own mini-apps to run on the clock, this project provides a flexible platform for creativity.
 
-<img 
-  src="https://github.com/user-attachments/assets/173d82de-72fe-487f-94ae-19014811e9f5" 
-  alt="IMG_1594" 
-  width="500" 
-/>
 
+<p align="center">
+  <img width="640" alt="image" src="https://github.com/user-attachments/assets/4c898f7e-56ae-4a8b-be34-464ad83a5ffb" />
+</p>
 
 
 ---
