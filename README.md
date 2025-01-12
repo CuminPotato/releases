@@ -20,7 +20,7 @@ We’re excited to see what the community will build around the PXL-Clock. Below
 3. [Filing Issues and Ideas](#filing-issues-and-ideas)  
 4. [Developing Your Own Apps](#developing-your-own-apps)  
 5. [Contributing](#contributing)  
-6. [Connect](#connect)
+6. [Get In Touch](#get-in-touch)
 7. [License](LICENSE.md)
 
 ---
@@ -47,25 +47,87 @@ Just head over to the [**Issues**](../../issues) tab and click **New Issue** to 
 
 ## Developing Your Own Apps
 
-[![NuGet Badge](https://buildstats.info/nuget/Pxl)](https://www.nuget.org/packages/Pxl)
+[![NuGet](https://img.shields.io/nuget/v/Pxl.svg?style=flat-square&logo=nuget)](https://www.nuget.org/packages/Pxl)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/Pxl.svg?style=flat-square)](https://www.nuget.org/packages/Pxl)
 
-You can use this repository as a reference point for developing your own custom PXL-Clock applications. We will be providing (or already have provided) examples, documentation, and tools to help you get started. Look for folders named `examples` or `docs` to find:
-- Sample code to illustrate how to interface with the clock’s hardware
-- Tutorials and step-by-step guides  
-- Best practices for building, testing, and deploying apps  
 
 Whether you’re a seasoned developer or new to programming, we hope these resources will jumpstart your creativity.
+
+You can use this repository as a reference point for developing your own custom PXL-Clock applications. We provide examples, documentation, and tools to help you get started:
+
+
+
+To programm PXL-Apps, you need to set up your development environment. Here’s how to get started:
+
+### Prerequisites
+
+**Frameworks**
+
+- [**.NET 8 SDK**](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- [**Node / npm** - current LTS](https://nodejs.org)
+
+**Tools**
+
+- [**Visual Studio Code (VSCode)**](https://code.visualstudio.com/)
+- [**Ionide-fsharp Extension for VSCode**](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)
+
+### Fork the Repository
+
+Best practice is to fork this repository to your GitHub account. This way, you can experiment with the code and save your changes, and maybe there will be some surprises along the way. 🎁
+
+### Create Your First App
+
+A PXL-App consists of two parts:
+
+- one or more F# script (or many of them) that contain the code for your app,
+- optionally some assets like images.
+
+To set up your first app, simply create a new F# script file in the `./apps` directory. You can use the existing apps as a starting point to learn more about the structure of a PXL-App.
+
+### 🚀 Start the Simulator
+
+Before running any apps, you’ll need to start the simulator.
+
+**Important:** ⚠️ Only one simulator should be running at a time.
+
+1. Open the list of build tasks in VSCode:
+   - Press `Ctrl+Shift+B` (Windows/Linux) or `Cmd+Shift+B` (macOS).
+2. Select **Start Simulator** from the list.
+
+As an alternative for the VSCode build task, just run `./start-simulator.sh` (Mac) or `./start-simulator.ps1` (Windows) in your terminal.
+
+### Run an App
+
+- Ensure the simulator is running (see above).
+- Open your app file in the editor (works as well with all samples and tutorials here in this repo).
+- Select the entire content of the file and run it by pressing `Alt+Enter` (Windows) or `Cmd+Enter` (Mac).
+
+You can modify the code, open new files, and re-run apps as often as you like. Simply re-evaluate the **entire file** (that's the mose easy way.)
+
+In case the simulator does not what you expect (e.g. you were in sleep mode), just restart the simulator.
+
+### Submit Your App
+
+When you’re ready to submit your app, create a pull request (PR) with your changes. We’ll review your app, provide feedback or merge it.
+
+Follow-up PRs (updates) for your app in case you want to improve it are welcome!
+
+### The PizzaMampf Sprite
+
+Check out the sprite 🖼️ `./apps/03_ Demos/assets/pizzaMampf.png`) and swap them with your own custom artwork to personalize your app.
 
 ---
 
 ## Contributing
+
 Contributions from the community are highly encouraged. If you want to help make PXL-Clock better, you can:
 1. **Create an Issue:** File a new issue for suggestions, bug reports, or feature requests.  
 2. **Submit a Pull Request:** Fork this repo, make your changes, and submit a pull request. Make sure to include a clear description of what you’ve changed or fixed.  
 
 Before contributing, please review our [**Code of Conduct**](CODE_OF_CONDUCT.md) (if available) to ensure a positive experience for everyone.
 
-## Connect
+## Get In Touch
+
 Get in touch with us and others on our [**Discord Server**](https://discord.gg/KDbVdKQh5j)
 
 ---
