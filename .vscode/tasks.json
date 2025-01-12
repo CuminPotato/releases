@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "options": {
+    "cwd": "."
+  },
+  "tasks": [
+    {
+      "label": "Start Simulator",
+      "type": "shell",
+      "command": "./start-simulator.sh",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "windows": {
+        "command": "./start-simulator.ps1"
+      }
+    }
+  ]
+}
