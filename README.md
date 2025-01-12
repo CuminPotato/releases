@@ -14,13 +14,27 @@ We’re excited to see what the community will build around the PXL-Clock. Below
 
 ---
 
+## Get In Touch
+
+Get in touch with us and others on our [**Discord Server**](https://discord.gg/KDbVdKQh5j)
+
+<p align="center">
+  <h3>Join the PXL-Clock Community on Discord</h3>
+  <a href="https://discord.gg/KDbVdKQh5j">
+    <img src="https://img.shields.io/badge/Discord-Join%20Server-blue?style=flat-square&logo=discord" alt="Join Our Discord">
+  </a>
+</p>
+
+
+---
+
 ## Table of Contents
 1. [About PXL-Clock](#about-pxl-clock)  
-2. [Releases](#releases)  
-3. [Filing Issues and Ideas](#filing-issues-and-ideas)  
-4. [Developing Your Own Apps](#developing-your-own-apps)  
-5. [Contributing](#contributing)  
-6. [Get In Touch](#get-in-touch)
+2. [Get In Touch](#get-in-touch)
+3. [Releases](#releases)  
+4. [Filing Issues and Ideas](#filing-issues-and-ideas)  
+5. [Developing Your Own Apps](#developing-your-own-apps)  
+6. [Contributing](#contributing)  
 7. [License](LICENSE.md)
 
 ---
@@ -125,10 +139,6 @@ Contributions from the community are highly encouraged. If you want to help make
 2. **Submit a Pull Request:** Fork this repo, make your changes, and submit a pull request. Make sure to include a clear description of what you’ve changed or fixed.  
 
 Before contributing, please review our [**Code of Conduct**](CODE_OF_CONDUCT.md) (if available) to ensure a positive experience for everyone.
-
-## Get In Touch
-
-Get in touch with us and others on our [**Discord Server**](https://discord.gg/KDbVdKQh5j)
 
 ---
 
