@@ -1,5 +1,4 @@
-﻿#r "nuget: Pxl, 0.0.1-preview.1"
-open PxlLocalDevShadow
+﻿#r "nuget: Pxl, 0.0.1-preview.2"
 
 open System
 open Pxl
