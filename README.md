@@ -134,18 +134,19 @@ Here are 2 ways of deploying an app or an image to the PXL-Clock. Keep in mind t
 - the PXL-Clock needs to be connected to the same network as your computer.
 - the artifacts you deploy are not persistent (for now) and will be lost after a reboot.
 
-**Image**
-To deploy an image to the PXL-Clock, you can use the following command:
+There are two ways to deploy an app or an image to the PXL-Clock:
 
-```bash
-```
+**Using the VSCode Build Tasks**
 
-**App**
+Open the list of build tasks in VSCode:
+- Press `Ctrl+Shift+B` (Windows/Linux) or `Cmd+Shift+B` (macOS).
+- Select **Deploy App** or **Deploy Image** from the list.
 
-To deploy an app to the PXL-Clock, you can use the following command:
+**Using the Scripts Directly**
 
-```bash
-```
+In your terminal, run the following scripts:
+- `./deploy-app.sh` (Mac) or `./deploy-app.ps1` (Windows) to deploy an app.
+- `./deploy-image.sh` (Mac) or `./deploy-image.ps1` (Windows) to deploy an image.
 
 ---
 
