@@ -15,6 +15,30 @@
       "windows": {
         "command": "./start-simulator.ps1"
       }
+    },
+    {
+      "label": "Deploy Image to Device",
+      "type": "shell",
+      "command": "./deploy-image.sh",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "windows": {
+        "command": "./deploy-image.ps1"
+      }
+    },
+    {
+      "label": "Deploy PXL-App to Device",
+      "type": "shell",
+      "command": "./deploy-app.sh",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "windows": {
+        "command": "./deploy-app.ps1"
+      }
     }
   ]
 }

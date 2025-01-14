@@ -29,8 +29,8 @@ Get in touch with us and others on our [**Discord Server**](https://discord.gg/K
 ---
 
 ## Table of Contents
-1. [About PXL-Clock](#about-pxl-clock)  
-2. [Get In Touch](#get-in-touch)
+1. [Get In Touch](#get-in-touch)
+2. [About PXL-Clock](#about-pxl-clock)  
 3. [Releases](#releases)  
 4. [Filing Issues and Ideas](#filing-issues-and-ideas)  
 5. [Developing Your Own Apps](#developing-your-own-apps)  
@@ -68,8 +68,6 @@ Just head over to the [**Issues**](../../issues) tab and click **New Issue** to 
 Whether you’re a seasoned developer or new to programming, we hope these resources will jumpstart your creativity.
 
 You can use this repository as a reference point for developing your own custom PXL-Clock applications. We provide examples, documentation, and tools to help you get started:
-
-
 
 To programm PXL-Apps, you need to set up your development environment. Here’s how to get started:
 
@@ -129,6 +127,25 @@ Follow-up PRs (updates) for your app in case you want to improve it are welcome!
 ### The PizzaMampf Sprite
 
 Check out the sprite 🖼️ `./apps/03_ Demos/assets/pizzaMampf.png`) and swap them with your own custom artwork to personalize your app.
+
+### Deploying an App or an Image to the PXL-Clock
+
+Here are 2 ways of deploying an app or an image to the PXL-Clock. Keep in mind that
+- the PXL-Clock needs to be connected to the same network as your computer.
+- the artifacts you deploy are not persistent (for now) and will be lost after a reboot.
+
+**Image**
+To deploy an image to the PXL-Clock, you can use the following command:
+
+```bash
+```
+
+**App**
+
+To deploy an app to the PXL-Clock, you can use the following command:
+
+```bash
+```
 
 ---
 
