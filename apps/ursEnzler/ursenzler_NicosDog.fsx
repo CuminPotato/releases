@@ -92,35 +92,49 @@ let shift animation i =
 
 let dog (minute: int) (second: int) =
     scene {
-        //let! trigger = Trigger.valueChanged(second)
-        pxl.xy(second % 24, 1).stroke(Colors.blue)
+        // pxl.xy(second % 24, 1).stroke(Colors.blue)
 
-        //if trigger then
-        let current = shift (second % 2) second
+        let calcColoredPixels () =
+            let current = 
+                shift (second % 2) second
+            let pixels =
+                [
+                    for l in 0..23 do
+                        for pixel in current[l] do
+                            yield pixel
+                ]
+            let coloredPixels =
+                [
+                    for pixel in pixels do
+                        let color =
+                            match pixel with
+                            | 'b' -> Colors.brown
+                            | 'y' -> Colors.yellow
+                            | 'd' -> Colors.saddleBrown
+                            | 'e' -> Colors.green
+                            | 'g' -> Colors.gray
+                            | 't' -> Colors.rosyBrown
+                            | 'l' -> Colors.saddleBrown
+                            | 'f' -> Colors.sandyBrown
+                            | 'c' -> Colors.bisque
+                            | '_' -> Colors.beige
+                            | _ -> Colors.blue
+                        color
+                ]
+            coloredPixels |> List.toArray
 
-        let pixels =
-            [|0..23|]
-            |> Array.collect (fun l ->
-                current[l]
-                |> Seq.toArray
-                |> Array.mapi (fun i pixel -> l, i, pixel))
+        // remember the colored pixels (initially) and be updated when second changes (below)        
+        let! coloredPixels = useState { calcColoredPixels () }
 
-        for l, c, pixel in pixels do
-            let color =
-                match pixel with
-                | 'b' -> Colors.brown
-                | 'y' -> Colors.yellow
-                | 'd' -> Colors.saddleBrown
-                | 'e' -> Colors.green
-                | 'g' -> Colors.gray
-                | 't' -> Colors.rosyBrown
-                | 'l' -> Colors.saddleBrown
-                | 'f' -> Colors.sandyBrown
-                | 'c' -> Colors.bisque
-                | '_' -> Colors.beige
-                | _ -> Colors.blue
+        // only calculate colored pixels when second changes
+        let! trigger = Trigger.valueChanged(second)
+        if trigger then
+            coloredPixels.value <- calcColoredPixels ()
 
-            pxl.xy(c,l).stroke(color)
+        // `pxl.xy` seems to be the performance issue in this app
+        pxls.set(coloredPixels.value)
+        // for c,l,color in coloredPixels.value do
+        //     pxl.xy(c,l).stroke(color)
     }
 
 let diffuser =
