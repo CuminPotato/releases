@@ -16,6 +16,8 @@ We’re excited to see what the community will build around the PXL-Clock. Below
 
 ## Get In Touch
 
+### Discord
+
 Get in touch with us and others on our [**Discord Server**](https://discord.gg/KDbVdKQh5j)
 
 <p align="center">
@@ -24,6 +26,11 @@ Get in touch with us and others on our [**Discord Server**](https://discord.gg/K
     <img src="https://img.shields.io/badge/Discord-Join%20Server-blue?style=flat-square&logo=discord" alt="Join Our Discord">
   </a>
 </p>
+
+
+### Bluesky
+
+Follow the [**#pxlclock hashtag**](https://bsky.app/hashtag/PXLclock) on **Bluesky** for getting news and see what others do!
 
 
 ---
