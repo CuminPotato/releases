@@ -1,3 +1,5 @@
+export const bpp = 3;
+
 class CombinedFrameBuffer {
   private readonly _frames: Uint8Array[] = [];
   private readonly _frameLength: number;
@@ -29,8 +31,6 @@ class CombinedFrameBuffer {
   }
 }
 
-export const bpp = 3;
-
 type TransmissionSyncedState = {
   startProcessingAt: Date,
 }
@@ -58,6 +58,7 @@ export function createBuffer
     fps: number,
     frameBufferSize: number,
     relativeFbDelayUntilStart: number,
+    turnOffDelayAfterBufferUnderrun: number,
     cyclicLogEveryMs: number | undefined,
     processFrame: (buffer: Uint8Array) => void,
     clearDisplay: () => void,
@@ -74,6 +75,7 @@ export function createBuffer
 
   let lastLogTimestamp = new Date();
   let framesCountSinceLastLog = 0;
+  let displayOffAfterBufferUnderrun = false;
 
   function processState(): State {
     const now = new Date();
@@ -103,12 +105,20 @@ export function createBuffer
       case 'waitingForNewTransmission': {
         if (frameBuffer.hasFrames) {
           const frameBufferProcessingDuration = frameBufferSize * 1000 / fps * relativeFbDelayUntilStart;
+          displayOffAfterBufferUnderrun = false;
 
           console.log(`New transmission synced - start processing in ${frameBufferProcessingDuration}ms ...`);
           return {
             tag: 'transmissionSynced',
             startProcessingAt: new Date(now.getTime() + frameBufferProcessingDuration),
           };
+        } else {
+          if (state.waitingSince.getTime() + turnOffDelayAfterBufferUnderrun < now.getTime() && !displayOffAfterBufferUnderrun) {
+            clearDisplay();
+            displayOffAfterBufferUnderrun = true;
+          }
+
+          return state;
         }
 
         return state;

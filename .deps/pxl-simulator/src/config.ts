@@ -4,5 +4,6 @@ export const defaultConfig = {
   fps: 40,
   frameBufferSize: 10,
   relativeFbDelayUntilStart: 0.5,
-  cyclicBufferLogEveryMs: 1_000
+  cyclicBufferLogEveryMs: 1_000,
+  turnOffDelayAfterBufferUnderrun: 500,
 };

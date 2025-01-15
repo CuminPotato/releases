@@ -43,6 +43,7 @@ function Simulator() {
       config.fps,
       config.frameBufferSize,
       config.relativeFbDelayUntilStart,
+      config.turnOffDelayAfterBufferUnderrun,
       config.cyclicBufferLogEveryMs,
       (pixels: Uint8Array) => {
         frameCount += 1;
