@@ -29,7 +29,7 @@
       }
     },
     {
-      "label": "Deploy PXL-App to Device",
+      "label": "Deploy App to Device",
       "type": "shell",
       "command": "./deploy-app.sh",
       "group": {
