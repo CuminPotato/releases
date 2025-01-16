@@ -102,7 +102,7 @@ scene {
 scene {
     let color = Colors.white
     let! ctx = getCtx ()
-    let row row = row * (Fonts.mono6x6.height + 1) |> int
+    let row row = row * (Fonts.mono6x6.height + 1.0) |> int
 
     // TODO: something like "every half second" or "every 3 seconds"
     let hour = ctx.now.ToString("HH")
