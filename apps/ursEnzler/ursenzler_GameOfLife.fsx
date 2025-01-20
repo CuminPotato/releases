@@ -200,7 +200,7 @@ let life =
         let! worldState = useState { getInitialWorld ctx.now.Day ctx.now.Month ctx.now.Hour ctx.now.Minute }
 
         let! minChanged = Trigger.valueChanged ctx.now.Minute
-        let! frameTrigger = Trigger.valueChanged (ctx.now.Second)
+        let! frameTrigger = Trigger.valueChanged (ctx.now.Millisecond / 500)
         let world =
             if minChanged then
                 let world = getInitialWorld ctx.now.Day ctx.now.Month ctx.now.Hour ctx.now.Minute
@@ -213,11 +213,8 @@ let life =
                 nextWorld
             else
                 worldState.value
-        for r in 0..23 do
-            for c in 0..23 do
-                let color =
-                    if world[(r * 24) + c] then alive else empty
-                pxl.xy(c,r).stroke(color)
+
+        world |> Array.map (fun cell -> if cell then alive else empty) |> pxls.set
     }
 
 [<AppV1(name = "UrsEnzler_GameOfLife")>]
