@@ -52,13 +52,13 @@ let seconds minute second =
             hsva
                 (float ((minute * 60) + s))
                 (1.0 - ((float step) * 0.15))
-                (1.0 - float (second - s) / 100.0)
+                (1.0 - float (second - s) / 100.0 - step * 0.05)
                 1
         else
             hsva
                 (float ((((minute - 1) % 60) * 60) + s + 1))
                 (1.0 - ((float step) * 0.15))
-                (1.0 - float ((second - s + 60) % 60) / 100.0)
+                (1.0 - float ((second - s + 60) % 60) / 100.0 - step * 0.05)
                 1
 
     let calcColoredPixels () =
